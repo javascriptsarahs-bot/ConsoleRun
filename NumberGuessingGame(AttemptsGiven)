@@ -1,0 +1,63 @@
+
+// Project 2: Number Guessing Game
+
+import { createInterface } from "node:readline/promises";
+
+const rl = createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+// Secret number
+const answer = ?;
+
+// TODO 1: Complete the for loop
+// The player has 5 attempts.
+
+for (let attempt = ___; attempt ___ ?; attempt___) {
+
+  // Ask the player to enter a number
+  const guess = Number(
+    await rl.question("Guess a number from 1 to 10: ")
+  );
+
+  // TODO 2: Check if the guess is correct
+  if (guess ___ answer) {
+
+    console.log("__________");
+
+    // TODO 3: Stop the loop
+    ______;
+
+  // TODO 4: Check if the guess is too high
+  } else if (guess ___ answer) {
+
+    console.log("__________");
+
+  // TODO 5: Handle a guess that is too low
+  } else {
+
+    console.log("__________");
+
+  }
+}
+
+// Close the input interface
+rl.close();
+
+/**
+ * Bonus Challenges
+ * 
+ * 1. Display how many attempts are remaining 
+ * after each incorrect guess
+ * 
+ * 2. Print "Game over!" if the player fails
+ * all 5 attempts.
+ * 
+ * 3. Replace the fixed answer wiht a random number
+ * from 1 to 10.
+ * 
+ * 4. Ask the player if they want to play again 
+ * using a while or do... while loop
+ * 
+ */
